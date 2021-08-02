@@ -6,7 +6,6 @@ specifiers:
   '@react-icons/all-files': ^4.1.0
   '@types/jest': ^26.0.24
   '@types/node': ^16.4.10
-  '@types/nprogress': ^0.2.0
   '@types/react': ^17.0.15
   '@types/react-dom': ^17.0.9
   '@types/react-router-config': ^5.0.3
@@ -17,7 +16,6 @@ specifiers:
   eslint: ^7.32.0
   i18next: ^20.3.5
   node-fetch: ^2.6.1
-  nprogress: ^0.2.0
   pnpm: ^6.11.5
   prism-theme-vars: ^0.2.2
   react: ^17.0.2
@@ -37,9 +35,9 @@ specifiers:
   vite-ssr: ^0.12.0
 
 dependencies:
+  '@mdx-js/react': 1.6.22_react@17.0.2
   '@react-icons/all-files': 4.1.0_react@17.0.2
   i18next: 20.3.5
-  nprogress: 0.2.0
   prism-theme-vars: 0.2.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -52,10 +50,8 @@ dependencies:
 
 devDependencies:
   '@mdx-js/mdx': 1.6.22
-  '@mdx-js/react': 1.6.22_react@17.0.2
   '@types/jest': 26.0.24
   '@types/node': 16.4.10
-  '@types/nprogress': 0.2.0
   '@types/react': 17.0.15
   '@types/react-dom': 17.0.9
   '@types/react-router-config': 5.0.3
@@ -510,7 +506,7 @@ packages:
       react: ^16.13.1 || ^17.0.0
     dependencies:
       react: 17.0.2
-    dev: true
+    dev: false
 
   /@mdx-js/util/1.6.22:
     resolution: {integrity: sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==}
@@ -635,10 +631,6 @@ packages:
 
   /@types/node/16.4.10:
     resolution: {integrity: sha512-TmVHsm43br64js9BqHWqiDZA+xMtbUpI1MBIA0EyiBmoV9pcEYFOSdj5fr6enZNfh4fChh+AGOLIzGwJnkshyQ==}
-    dev: true
-
-  /@types/nprogress/0.2.0:
-    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
     dev: true
 
   /@types/parse5/5.0.3:
@@ -2465,10 +2457,6 @@ packages:
   /node-releases/1.1.73:
     resolution: {integrity: sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==}
     dev: true
-
-  /nprogress/0.2.0:
-    resolution: {integrity: sha1-y480xTIT2JVyP8urkH6UIq28r7E=}
-    dev: false
 
   /nwsapi/2.2.0:
     resolution: {integrity: sha512-h2AatdwYH+JHiZpv7pt/gSX1XoRGb7L/qSIeuqA6GwYoF9w1vP1cw42TO0aI2pNyshRK5893hNSl+1//vHK7hQ==}
