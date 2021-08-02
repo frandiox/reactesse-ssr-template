@@ -1,6 +1,6 @@
-import { DATE_FORMATS } from './date-formats'
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from './locales'
-import { NUMBER_FORMATS } from './number-formats'
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
 export {
   DEFAULT_LOCALE,
@@ -26,28 +26,32 @@ export async function loadAsyncLanguage(i18n: any, locale = DEFAULT_LOCALE) {
   try {
     const result = await importLocale(locale)
     if (result) {
-      i18n.setLocaleMessage(locale, result.default || result)
-      i18n.locale.value = locale
+      i18n.addResourceBundle(locale, 'translation', result.default || result)
+      i18n.changeLanguage(locale)
     }
   } catch (error) {
     console.error(error)
   }
 }
 
-export async function installI18n(app: any, locale = '') {
+export async function installI18n(locale = '') {
   locale = SUPPORTED_LOCALES.includes(locale) ? locale : DEFAULT_LOCALE
   const messages = await importLocale(locale)
 
-  // const i18n = createI18n({
-  //   legacy: false,
-  //   locale,
-  //   fallbackLocale: DEFAULT_LOCALE,
-  //   messages: {
-  //     [locale]: messages.default || messages,
-  //   },
-  //   datetimeFormats: DATE_FORMATS,
-  //   numberFormats: NUMBER_FORMATS,
-  // })
-
-  // app.use(i18n)
+  i18n
+    .use(initReactI18next) // passes i18n down to react-i18next
+    .init({
+      // debug: true,
+      resources: {
+        // @ts-ignore
+        [locale]: { translation: messages.default || messages },
+      },
+      lng: locale,
+      fallbackLng: DEFAULT_LOCALE,
+      interpolation: {
+        escapeValue: false, // react already safes from xss
+      },
+    })
 }
+
+export default i18n

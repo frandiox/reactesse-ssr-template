@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { FaCampground } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 
 export default function Home({ message }: any) {
   const [name = '', setName] = useState<string>()
@@ -9,6 +10,8 @@ export default function Home({ message }: any) {
   const go = () => {
     history.push(`/hi/${encodeURIComponent(name)}`)
   }
+
+  const { t } = useTranslation()
 
   return (
     <div>
@@ -25,26 +28,26 @@ export default function Home({ message }: any) {
         </a>
       </p>
       <p>
-        <em className="text-sm opacity-75">Something</em>
+        <em className="text-sm opacity-75">{t('intro.desc')}</em>
       </p>
       <div className="py-4" />
       <input
         id="input"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="what's your name"
-        aria-label="what's your name"
+        placeholder={t('intro.whats-your-name')}
+        aria-label={t('intro.whats-your-name')}
         type="text"
         autoComplete="false"
         className="px-4 py-2 text-sm text-center bg-transparent border border-gray-200 rounded outline-none active:outline-none dark:border-gray-700"
         style={{ width: '250px' }}
       />
       <label className="hidden" htmlFor="input">
-        SomethingElse
+        {t('intro.whats-your-name')}
       </label>
       <div>
         <button className="m-3 text-sm btn" disabled={!name} onClick={go}>
-          Go
+          {t('button.go')}
         </button>
       </div>
       Message from API: {message}

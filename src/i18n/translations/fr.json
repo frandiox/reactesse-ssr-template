@@ -10,7 +10,7 @@
   "intro": {
     "desc": "Example d'application Vite",
     "dynamic-route": "Démo de route dynamique",
-    "hi": "Salut, {name} !",
+    "hi": "Salut, {{name}} !",
     "whats-your-name": "Comment t'appelles-tu ?"
   },
   "not-found": "Page non trouvée"

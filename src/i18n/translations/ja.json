@@ -10,7 +10,7 @@
   "intro": {
     "desc": "固執された Vite スターターテンプレート",
     "dynamic-route": "動的ルートのデモ",
-    "hi": "こんにちは、{name}！",
+    "hi": "こんにちは、{{name}}！",
     "whats-your-name": "あなたの名前は？"
   },
   "not-found": "見つかりませんでした"

@@ -12,5 +12,5 @@ export function useDarkTheme() {
     })
   }
 
-  return [isDark, toggleDark]
+  return [isDark, toggleDark] as [boolean, () => void]
 }

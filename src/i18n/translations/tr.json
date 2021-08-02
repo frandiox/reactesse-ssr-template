@@ -10,7 +10,7 @@
   "intro": {
     "desc": "Görüşlü Vite Başlangıç Şablonu",
     "dynamic-route": "Dinamik rota demosu",
-    "hi": "Merhaba, {name}!",
+    "hi": "Merhaba, {{name}}!",
     "whats-your-name": "Adınız nedir ?"
   },
   "not-found": "Bulunamadı"

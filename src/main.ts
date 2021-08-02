@@ -5,7 +5,7 @@ import routes from 'virtual:generated-pages'
 import App from './App'
 import { PropsProvider } from './api'
 
-// import { installI18n, extractLocaleFromPath, DEFAULT_LOCALE } from './i18n'
+import { installI18n, extractLocaleFromPath, DEFAULT_LOCALE } from './i18n'
 
 routes.forEach((route) => {
   const { path } = route
@@ -26,16 +26,16 @@ export default viteSSR(
     routes,
     PropsProvider,
     // Use Router's base for i18n routes
-    // base: ({ url }) => {
-    //   const locale = extractLocaleFromPath(url.pathname)
-    //   return locale === DEFAULT_LOCALE ? '/' : `/${locale}/`
-    // },
+    base: ({ url }) => {
+      const locale = extractLocaleFromPath(url.pathname)
+      return locale === DEFAULT_LOCALE ? '/' : `/${locale}/`
+    },
   },
   async (ctx) => {
-    const { url, isClient, initialState } = ctx
+    const { url, initialState } = ctx
 
     // Load language asyncrhonously to avoid bundling all languages
-    // await installI18n(app, extractLocaleFromPath(initialRoute.href))
+    await installI18n(extractLocaleFromPath(url.pathname))
 
     // Freely modify initialState and it will be serialized later
     if (import.meta.env.SSR) {
