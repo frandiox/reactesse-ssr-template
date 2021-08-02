@@ -3,17 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import Footer from './components/Footer'
 import { renderRoutes } from 'react-router-config'
 
-export default function App({
-  isClient,
-  url,
-  router,
-}: {
-  isClient: boolean
-  url: URL
-  router: { routes: any[] }
-}) {
-  const baseUrl = isClient ? '' : url.origin
-
+export default function App({ router }: { router: { routes: any[] } }) {
   const title = 'Reactesse SSR'
   const description = 'Opinionated SSR Vite Starter Template for React'
 
@@ -32,6 +22,7 @@ export default function App({
 
       <main className="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
         {renderRoutes(router.routes)}
+
         <Footer />
       </main>
     </div>
