@@ -3,6 +3,9 @@ import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
 import WindiCSS from 'vite-plugin-windicss'
 import viteSSR from 'vite-ssr/plugin'
+import mdx from 'vite-plugin-mdx'
+// @ts-ignore
+import remarkPrism from 'remark-prism'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import getPageProps from './serverless/api/get-page-props'
 
@@ -13,8 +16,11 @@ export default defineConfig({
     },
   },
   plugins: [
-    viteSSR(),
     reactRefresh(),
+    viteSSR(),
+    mdx({
+      remarkPlugins: [remarkPrism],
+    }),
     {
       name: 'API-mock',
       configureServer({ middlewares }) {
@@ -25,7 +31,7 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       react: true,
-      extensions: ['jsx', 'tsx'],
+      extensions: ['jsx', 'tsx', 'mdx'],
     }),
 
     // https://github.com/antfu/vite-plugin-windicss
