@@ -4,11 +4,12 @@ import { FaCampground } from 'react-icons/fa'
 import { FiStar, FiMoon, FiSun } from 'react-icons/fi'
 import { IoLanguage } from 'react-icons/io5'
 import { AiOutlineFileText, AiFillGithub } from 'react-icons/ai'
+import { useDarkTheme } from '~/utils/dark-theme'
 
 export default function Footer() {
-  const toggleDark = () => {}
+  const [isDark, toggleDark] = useDarkTheme()
+
   const toggleLocales = () => {}
-  const isDark = true
 
   return (
     <nav className="text-xl mt-6 space-x-2">
