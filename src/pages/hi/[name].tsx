@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
+import { FaRegHandSpock } from 'react-icons/fa'
 
 export default function Hi({ message }: any) {
   const { name } = useParams() as any
@@ -9,7 +10,7 @@ export default function Hi({ message }: any) {
   return (
     <div>
       <p className="text-4xl">
-        {/* <carbon-pedestrian className="inline-block" /> */}
+        <FaRegHandSpock className="inline-block" />
       </p>
       <p>Hello {name}</p>
       <p className="text-sm opacity-50">

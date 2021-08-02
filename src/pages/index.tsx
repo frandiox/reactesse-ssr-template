@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { FaCampground } from 'react-icons/fa'
 
 export default function Home({ message }: any) {
   const [name = '', setName] = useState<string>()
@@ -12,7 +13,7 @@ export default function Home({ message }: any) {
   return (
     <div>
       <p className="text-4xl">
-        {/* <carbon-campsite className="inline-block" /> */}
+        <FaCampground className="inline-block" />
       </p>
       <p>
         <a
@@ -31,7 +32,7 @@ export default function Home({ message }: any) {
         id="input"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="what's yoru name"
+        placeholder="what's your name"
         aria-label="what's your name"
         type="text"
         autoComplete="false"

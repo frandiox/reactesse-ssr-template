@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Footer from './components/Footer'
-import { Switch, Route } from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
 
 export default function App({
   isClient,
@@ -31,20 +31,9 @@ export default function App({
       </Helmet>
 
       <main className="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
-        <div className="mt-5 mx-auto text-center opacity-25 text-sm">
-          <Switch>
-            {router.routes.map((route) => {
-              return (
-                <Route key={route.path} path={route.path}>
-                  <route.component route={route} baseUrl={baseUrl} />
-                </Route>
-              )
-            })}
-          </Switch>
-        </div>
+        {renderRoutes(router.routes)}
+        <Footer />
       </main>
-
-      <Footer />
     </div>
   )
 }

@@ -1,50 +1,51 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaCampground } from 'react-icons/fa'
+import { FiStar, FiMoon, FiSun } from 'react-icons/fi'
+import { IoLanguage } from 'react-icons/io5'
+import { AiOutlineFileText, AiFillGithub } from 'react-icons/ai'
 
 export default function Footer() {
+  const toggleDark = () => {}
+  const toggleLocales = () => {}
+  const isDark = true
+
   return (
     <nav className="text-xl mt-6 space-x-2">
       <Link className="icon-btn" to="/" title="Home">
-        Home
-        {/* <carbon-campsite /> */}
+        <FaCampground />
       </Link>
 
-      {/* <a
-      class="icon-btn"
-      rel="noreferrer"
-      href="https://github.com/frandiox/vite-ssr"
-      target="_blank"
-      title="Library"
-    >
-      <carbon-star />
-    </a>
+      <a
+        className="icon-btn"
+        rel="noreferrer"
+        href="https://github.com/frandiox/vite-ssr"
+        target="_blank"
+        title="Library"
+      >
+        <FiStar />
+      </a>
 
-    <a class="icon-btn" :title="t('button.toggle_dark')" @click="toggleDark">
-      <carbon-moon v-if="isDark" />
-      <carbon-sun v-else />
-    </a>
+      <a className="icon-btn" onClick={toggleDark}>
+        {isDark ? <FiMoon /> : <FiSun />}
+      </a>
+      <a className="icon-btn" onClick={toggleLocales}>
+        <IoLanguage />
+      </a>
 
-    <a
-      class="icon-btn"
-      :title="t('button.toggle_langs')"
-      @click="toggleLocales"
-    >
-      <carbon-language />
-    </a>
+      <Link className="icon-btn" to="/about">
+        <AiOutlineFileText />
+      </Link>
 
-    <router-link class="icon-btn" to="/about" :title="t('button.about')">
-      <carbon-dicom-overlay />
-    </router-link>
-
-    <a
-      class="icon-btn"
-      rel="noreferrer"
-      href="https://github.com/frandiox/reactesse-ssr-template"
-      target="_blank"
-      title="Template"
-    >
-      <carbon-logo-github />
-    </a> */}
+      <a
+        className="icon-btn"
+        rel="noreferrer"
+        href="https://github.com/frandiox/reactesse-ssr-template"
+        target="_blank"
+        title="Template"
+      >
+        <AiFillGithub />
+      </a>
     </nav>
   )
 }
