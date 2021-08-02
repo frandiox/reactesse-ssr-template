@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { FaCampground } from 'react-icons/fa'
+import { FaCampground } from '@react-icons/all-files/fa/FaCampground'
 import { useTranslation } from 'react-i18next'
 
 export default function Home({ message }: any) {

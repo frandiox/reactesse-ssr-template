@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory, useParams } from 'react-router-dom'
-import { FaRegHandSpock } from 'react-icons/fa'
+import { FaRegHandSpock } from '@react-icons/all-files/fa/FaRegHandSpock'
 import { useTranslation } from 'react-i18next'
 
 export default function Hi({ message }: any) {

@@ -13,6 +13,7 @@
     "deploy:prod": "cd serverless && vercel --prod"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "i18next": "^20.3.5",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
@@ -20,7 +21,6 @@
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.0.9",
     "react-i18next": "^11.11.4",
-    "react-icons": "^4.2.0",
     "react-router": "^5.2.0",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0",

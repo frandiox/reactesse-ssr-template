@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@mdx-js/mdx': ^1.6.22
   '@mdx-js/react': ^1.6.22
+  '@react-icons/all-files': ^4.1.0
   '@types/jest': ^26.0.24
   '@types/node': ^16.4.10
   '@types/nprogress': ^0.2.0
@@ -23,7 +24,6 @@ specifiers:
   react-dom: ^17.0.2
   react-helmet-async: ^1.0.9
   react-i18next: ^11.11.4
-  react-icons: ^4.2.0
   react-router: ^5.2.0
   react-router-config: ^5.1.1
   react-router-dom: ^5.2.0
@@ -37,6 +37,7 @@ specifiers:
   vite-ssr: ^0.12.0
 
 dependencies:
+  '@react-icons/all-files': 4.1.0_react@17.0.2
   i18next: 20.3.5
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
@@ -44,7 +45,6 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-helmet-async: 1.0.9_react-dom@17.0.2+react@17.0.2
   react-i18next: 11.11.4_i18next@20.3.5+react@17.0.2
-  react-icons: 4.2.0_react@17.0.2
   react-router: 5.2.0_react@17.0.2
   react-router-config: 5.1.1_react-router@5.2.0+react@17.0.2
   react-router-dom: 5.2.0_react@17.0.2
@@ -536,6 +536,14 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.11.0
     dev: true
+
+  /@react-icons/all-files/4.1.0_react@17.0.2:
+    resolution: {integrity: sha512-hxBI2UOuVaI3O/BhQfhtb4kcGn9ft12RWAFVMUeNjqqhLsHvFtzIkFaptBJpFDANTKoDfdVoHTKZDlwKCACbMQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /@rollup/plugin-replace/3.0.0:
     resolution: {integrity: sha512-3c7JCbMuYXM4PbPWT4+m/4Y6U60SgsnDT/cCyAyUKwFHg7pTSfsSQzIpETha3a3ig6OdOKzZz87D9ZXIK3qsDg==}
@@ -2783,14 +2791,6 @@ packages:
       '@babel/runtime': 7.14.8
       html-parse-stringify: 3.0.1
       i18next: 20.3.5
-      react: 17.0.2
-    dev: false
-
-  /react-icons/4.2.0_react@17.0.2:
-    resolution: {integrity: sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==}
-    peerDependencies:
-      react: '*'
-    dependencies:
       react: 17.0.2
     dev: false
 
