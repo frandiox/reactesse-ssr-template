@@ -7,6 +7,7 @@ import mdx from 'vite-plugin-mdx'
 // @ts-ignore
 import remarkPrism from 'remark-prism'
 import reactRefresh from '@vitejs/plugin-react-refresh'
+// @ts-ignore
 import getPageProps from './serverless/api/get-page-props'
 
 export default defineConfig({
