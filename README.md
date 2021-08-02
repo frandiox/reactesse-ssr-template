@@ -1,4 +1,4 @@
-# Reactesse SSR -- WIP
+# Reactesse SSR
 
 > React + Vite + SSR template based on [@antfu](https://github.com/antfu)'s [Vitesse](https://github.com/antfu/vitesse) with [`vite-ssr`](https://github.com/frandiox/vite-ssr).
 
@@ -6,25 +6,19 @@
 <a href="https://reactesse-ssr.vercel.app/">Live Demo</a>
 </p>
 
-## Features -- WIP
+## Features
 
 - ⚡️ [React](https://github.com/facebook/react), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild)
 
 - 🗂 [File based routing](./src/pages)
 
-<!-- - 📦 [Components auto importing](./src/components) -->
-
-<!-- - 📑 [Layout system](./src/layouts) -->
-
-<!-- - 📲 [PWA](https://github.com/antfu/vite-plugin-pwa) -->
-
 - 🎨 [Windi CSS](https://github.com/windicss/windicss) - on-demand Tailwind CSS with speed
 
-<!-- - 😃 [Use icons from any icon sets, with no compromise](./src/components) -->
+- 😃 [SVG icons](https://react-icons.github.io/react-icons/)
 
-<!-- - 🌍 [I18n ready](./src/i18n/translations) -->
+- 🌍 [I18n ready](./src/i18n/translations)
 
-<!-- - 🗒 [Markdown Support](https://github.com/antfu/vite-plugin-md) -->
+- 🗒 [Markdown Support](https://github.com/brillout/vite-plugin-mdx)
 
 - 🖨 Server-side rendering (SSR) in Node.js via [vite-ssr](https://github.com/frandiox/vite-ssr)
 
@@ -41,22 +35,14 @@
 - [Windi CSS](https://github.com/windicss/windicss) (On-demand [TailwindCSS](https://tailwindcss.com/)) - lighter and faster, with a bundle additional features!
   - [Windi CSS Typography](https://windicss.netlify.app/guide/plugins.html#typography) - similar to [Tailwind CSS Typography](https://github.com/tailwindlabs/tailwindcss-typograph) but for Windi CSS
 
-<!-- ### Icons
-
-- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
-- [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) - icons as Vue components -->
-
 ### Plugins
 
 - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-  <!-- - [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components) - components auto import -->
-  <!-- - [`vite-plugin-pwa`](https://github.com/antfu/vite-plugin-pwa) - PWA -->
 - [`vite-plugin-windicss`](https://github.com/antfu/vite-plugin-windicss) - WindiCSS support
-  <!-- - [`vite-plugin-md`](https://github.com/antfu/vite-plugin-md) - Markdown as components / components in Markdown
-    - [`markdown-it-prism`](https://github.com/jGleitz/markdown-it-prism) - [Prism](https://prismjs.com/) for syntax highlighting
-    - [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) - customizable Prism.js theme using CSS variables -->
-  <!-- - [Vue I18n](https://github.com/intlify/vue-i18n-next) - Internationalization
-    - [`vite-plugin-vue-i18n`](https://github.com/intlify/vite-plugin-vue-i18n) - Vite plugin for Vue I18n -->
+- [`vite-plugin-mdx`](https://github.com/brillout/vite-plugin-mdx) - Markdown as components / components in Markdown
+- [`remark-prism`](https://github.com/sergioramos/remark-prism) - [Prism](https://prismjs.com/) for syntax highlighting
+- [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) - customizable Prism.js theme using CSS variables
+- [react-i18next](https://react.i18next.com/) - Internationalization
 - [`react-helmet-async`](https://github.com/staylor/react-helmet-async) - manipulate document head reactively
 
 ### Dev tools
@@ -66,9 +52,7 @@
 - [`vite-ssr`](https://github.com/frandiox/vite-ssr) - Server-side rendering
 - [Vercel](https://vercel.com/) - deploy
 - [VS Code Extensions](./.vscode/extensions.json)
-  <!-- - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) -->
-  <!-- - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) -->
-  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## Try it now!
 
